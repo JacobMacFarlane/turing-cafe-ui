@@ -30,6 +30,7 @@ clearInputs()
             <form className="newRez">
                 <input
                 className="form-item input"
+                required
                     type="text"
                     placeholder="Name"
                     name="name"
@@ -37,6 +38,7 @@ clearInputs()
                     onChange={event => setName(event.target.value)}
                     />
                     <input
+                    required
                     className="form-item input"
                     type="text"
                     placeholder="Date (mm/dd)"
@@ -45,6 +47,7 @@ clearInputs()
                     onChange={event => setDate(event.target.value)}
                     />
                      <input
+                     required
                      className="form-item input"
                     type="text"
                     placeholder="Time"
@@ -53,6 +56,7 @@ clearInputs()
                     onChange={event => setTime(event.target.value)}
                     />
                      <input
+                     required
                      className="form-item input"
                     type="text"
                     placeholder="Number of Guests"
