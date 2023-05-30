@@ -24,11 +24,14 @@ const App = () => {
     fetchReservations()
   }, [])
   
+  const addRez = (newRez) => {
+    setReservations([...reservations, newRez])
+  }
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form props={addRez}/>
         </div>
         <div className='resy-container'>
           <Main props={reservations}/>

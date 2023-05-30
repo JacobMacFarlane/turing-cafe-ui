@@ -1,12 +1,19 @@
 import React, {useState } from "react";
 
-const Form = (props) => {
+const Form = ({props}) => {
     const [name, setName] = useState('')
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
     const [guests, setGuests] = useState(0)
 
-    const submitRez = event => {
+    const clearInputs = () => {
+        setDate('')
+        setName('')
+        setTime('')
+        setGuests(0)
+    }
+    
+    const submitRez = (event) => {
 event.preventDefault()
 const newRez = {
     id: Date.now(),
@@ -15,15 +22,11 @@ const newRez = {
     time,
     guests
 }
-
+console.log(newRez, 'in form')
+props(newRez)
 clearInputs()
 }
-const clearInputs = () => {
-    setDate('')
-    setName('')
-    setTime('')
-    setGuests(0)
-}
+
     return (
             <form>
                 <input

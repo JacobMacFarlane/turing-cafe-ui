@@ -1,9 +1,8 @@
 import React from "react"
 import './Card.css';
 const Card = ({props}) => {
-    console.log(props, 'in card')
     return (
-        <div className="card">
+        <div className="card" key={props.id}>
                 <h2>{props.name}</h2> 
                 <p>{props.date}</p>
                 <p>{props.time} pm</p>

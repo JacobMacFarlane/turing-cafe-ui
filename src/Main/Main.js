@@ -2,15 +2,17 @@ import React from "react";
 import Card from "../Card/Card";
 import './Main.css';
 const Main = ({ props }) => {
-   const cards = props.map((rez) => {
+   const cards = props.map((rez, index) => {
     return (
-        <div className="eachCard">
-            <Card key={rez.id} props={rez} />
+        <div key={index} className="eachCard">
+            <Card key={index} props={rez} />
         </div>
     )
    })
     return (
-        <div className="resy-container">{cards}</div>
+        <div className="resy-container">
+            {cards}
+        </div>
     )
 }
 
