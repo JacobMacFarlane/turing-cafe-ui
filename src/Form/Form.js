@@ -22,7 +22,6 @@ const Form = ({props}) => {
         time,
         guests
 }
-console.log(newRez, 'in form')
 props(newRez)
 clearInputs()
 }
