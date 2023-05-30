@@ -4,23 +4,23 @@ const Form = ({props}) => {
     const [name, setName] = useState('')
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
-    const [guests, setGuests] = useState(0)
+    const [guests, setGuests] = useState('')
 
     const clearInputs = () => {
         setDate('')
         setName('')
         setTime('')
-        setGuests(0)
+        setGuests('')
     }
-    
+
     const submitRez = (event) => {
-event.preventDefault()
-const newRez = {
-    id: Date.now(),
-    name,
-    date,
-    time,
-    guests
+        event.preventDefault()
+    const newRez = {
+        id: Date.now(),
+        name,
+        date,
+        time,
+        guests
 }
 console.log(newRez, 'in form')
 props(newRez)
@@ -51,7 +51,7 @@ clearInputs()
                     onChange={event => setTime(event.target.value)}
                     />
                      <input
-                    type="number"
+                    type="text"
                     placeholder="Number of Guests"
                     name="guests"
                     value={guests}
