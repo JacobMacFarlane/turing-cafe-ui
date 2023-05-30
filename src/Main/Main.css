@@ -1,0 +1,9 @@
+.resy-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.eachCard {
+    margin: 10px
+}
